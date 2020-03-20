@@ -60,12 +60,12 @@ const serverless = require('serverless-http');
 // });
 
 
-// router.get('/test', (req, res)=>{
-//     res.json({
-//         'hello': 'test123'
+router.get('/test', (req, res)=>{
+    res.json({
+        'hello': 'test1234'
 
-//     });
-// });
+    });
+});
 
 
 app.use('/.netlify/functions/api', router);

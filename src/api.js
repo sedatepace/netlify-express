@@ -62,7 +62,7 @@ const serverless = require('serverless-http');
 
 router.get('/test', (req, res)=>{
     res.json({
-        'hello': 'test1234'
+        'hello': 'test12345'
 
     });
 });

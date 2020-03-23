@@ -1,5 +1,5 @@
 const express = require("express");
-const cookieParser = require('cokie-parser');
+const cookieParser = require('cookie-parser');
 
 const path  = require('path');
 const session = require('express-session');

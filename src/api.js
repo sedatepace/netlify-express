@@ -15,7 +15,7 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({exteded: false}));
-app.use(cookiesParser('nodebirdsecret'));
+app.use(cookieParser('nodebirdsecret'));
 app.use(seesion({
     resave: false,
     saveUninitialized: false,

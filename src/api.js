@@ -2,6 +2,9 @@ const express = require("express");
 const cookieParser = require('cookie-parser');
 
 const path  = require('path');
+const string = __dirname;
+
+
 const session = require('express-session');
 const flash = require('connect-flash');
 
@@ -31,13 +34,14 @@ app.use(flash());
 const serverless = require('serverless-http');
 
 
+const upload = 1;
 
 const router = express.Router();
 // router.get('/page', pageRouter);
 
 router.get('/test', (req, res)=>{
     res.json({
-        'hello': 'test0323'
+        'hello': upload
 
     });
 });
@@ -62,7 +66,8 @@ router.get('/test2/:n1/:n2', (req, res)=>{
 router.get('/dir', (req, res)=>{
     try{
         res.join({
-            'path':  path.dirname()
+            'path':  path.dirname(string),
+            '__dirname': __dirname
         });
     }catch(err){
         res.json({

@@ -69,7 +69,7 @@ router.get('/dir', (req, res)=>{
         res.join({
             'ver': ver,
             'path':  path.dirname(string),
-            '__dirname': __dirname
+
         });
     }catch(err){
         res.json({

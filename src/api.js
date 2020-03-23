@@ -37,14 +37,14 @@ const router = express.Router();
 
 router.get('/test', (req, res)=>{
     res.json({
-        'hello': 'test922'
+        'hello': 'test0323'
 
     });
 });
 router.get('/profile', (req, res)=>{
     try{
         res.render('profile', { title: '내 정보 - NodeBird', user: null});
-    }catch(err{
+    }catch(err){
         res.json({
             'err': err
         });

@@ -33,7 +33,7 @@ const serverless = require('serverless-http');
 
 
 const router = express.Router();
-router.get('/page', pageRouter);
+// router.get('/page', pageRouter);
 
 router.get('/test', (req, res)=>{
     res.json({
@@ -42,7 +42,7 @@ router.get('/test', (req, res)=>{
     });
 });
 
-
+app.use('/.netlify/function/api/page', pageRouter);
 app.use('/.netlify/functions/api', router);
 
 module.exports.handler = serverless(app);

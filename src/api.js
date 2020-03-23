@@ -33,7 +33,7 @@ const serverless = require('serverless-http');
 
 
 const router = express.Router();
-router.get('/', pageRouter);
+router.get('/page', pageRouter);
 
 router.get('/test', (req, res)=>{
     res.json({

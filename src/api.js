@@ -34,7 +34,7 @@ app.use(flash());
 const serverless = require('serverless-http');
 
 
-const upload = 1;
+const upload = 2;
 
 const router = express.Router();
 // router.get('/page', pageRouter);
@@ -66,6 +66,7 @@ router.get('/test2/:n1/:n2', (req, res)=>{
 router.get('/dir', (req, res)=>{
     try{
         res.join({
+            'ver': '2',
             'path':  path.dirname(string),
             '__dirname': __dirname
         });

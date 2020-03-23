@@ -59,6 +59,19 @@ router.get('/test2/:n1/:n2', (req, res)=>{
 });
 
 
+router.get('/dir', (req, res)=>{
+    try{
+        res.join({
+            'path':  path.join(__dirname,'views')
+        });
+    }catch(err){
+        res.json({
+            'err': err
+        });
+    }
+    
+});
+
 app.use('/.netlify/functions/api', router);
 
 module.exports.handler = serverless(app);

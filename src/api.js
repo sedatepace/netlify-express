@@ -2,7 +2,7 @@ const express = require("express");
 const cookieParser = require('cookie-parser');
 
 const path  = require('path');
-const string = __dirname;
+const string = __filename;
 
 
 const session = require('express-session');
@@ -65,13 +65,15 @@ router.get('/test2/:n1/:n2', (req, res)=>{
 
 router.get('/dir', (req, res)=>{
     try{
+        const ver = 2;
         res.join({
-            'ver': '2',
+            'ver': ver,
             'path':  path.dirname(string),
             '__dirname': __dirname
         });
     }catch(err){
         res.json({
+            'ver': ver,
             'err': err
         });
     }

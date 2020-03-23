@@ -64,8 +64,9 @@ router.get('/test2/:n1/:n2', (req, res)=>{
 
 
 router.get('/dir', (req, res)=>{
+    const ver = 2;
     try{
-        const ver = 2;
+        
         res.join({
             'ver': ver,
             'path':  path.dirname(string),

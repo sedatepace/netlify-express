@@ -37,12 +37,16 @@ const router = express.Router();
 
 router.get('/test', (req, res)=>{
     res.json({
-        'hello': 'test12345'
+        'hello': 'test922'
 
     });
 });
+router.get('/profile', (req, res)=>{
+    res.render('profile', { title: '내 정보 - NodeBird', user: null});
+});
 
-app.use('/.netlify/function/api/page', pageRouter);
+
+
 app.use('/.netlify/functions/api', router);
 
 module.exports.handler = serverless(app);

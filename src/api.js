@@ -44,7 +44,12 @@ router.get('/test', (req, res)=>{
 router.get('/profile', (req, res)=>{
     res.render('profile', { title: '내 정보 - NodeBird', user: null});
 });
+router.get('/test2', (req, res)=>{
+    res.json({
+        'hello': 'test922'
 
+    });
+});
 
 
 app.use('/.netlify/functions/api', router);
